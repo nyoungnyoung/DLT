@@ -65,7 +65,7 @@ public class NotificationScheduler {
                 fcmService.sendTopicMessageTo(
                         String.valueOf(plan.getPlanId()),
                         "약속 30분 전",
-                        "[" + plan.getTitle() + "] 참여자들의 위치 공유가 시작되었습니다.",
+                        "[" + plan.getTitle() + "] 참여자의 위치 공유가 시작되었습니다.",
                         String.valueOf(plan.getPlanId()),
                         "toDetailPlanFragment"
                 );
