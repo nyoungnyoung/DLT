@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">DLT</string>
+
+    <!--  Permission  -->
+    <string name="image_black_camera">카메라 아이콘입니다.</string>
+    <string name="image_black_gallery">갤러리 아이콘입니다.</string>
+    <string name="image_black_location">위치정보 아이콘입니다.</string>
+    <string name="title_permission">접근 권한 안내</string>
+    <string name="content_permission_main">서비스 사용을 위해\n아래의 접근 권한 동의가 필요합니다.</string>
+    <string name="content_permission_sub">필수가 아닌 권한은 승인하지 않아도 서비스 이용은 가능하지만 해당 기능을 사용하실 수 없으며, 해당 기능을 사용할 때 다시 접근 권한에 대한 동의 요청을 받게됩니다.</string>
+    <string name="title_permission_camera">카메라 (선택)</string>
+    <string name="content_permission_camera">약속 후기 사진 촬영을 위한 접근</string>
+    <string name="title_permission_gallery">갤러리 (선택)</string>
+    <string name="content_permission_gallery">후기 사진 업로드를 위한 접근</string>
+    <string name="title_permission_location">위치 정보 (필수)</string>
+    <string name="content_permission_location">약속 시간 임박 시 위치 표시를 위한 접근</string>
+    <string name="content_check">확인</string>
+
+    <!--  LogIn  -->
+    <string name="title_login">언제와</string>
+    <string name="subtitle_login">Don\'t Be Late Together</string>
+    <string name="image_login_character">로그인 화면 캐릭터입니다.</string>
+    <string name="image_login_button">로그인 버튼입니다.</string>
+
+    <!--MyPage-->
+    <string name="title_late_rate">지각율</string>
+    <string name="title_average_arrival_time">평균 도착시간</string>
+    <string name="title_late_cost">지각비</string>
+    <string name="title_user_info">계정 정보</string>
+    <string name="title_plan_log">약속 내역</string>
+    <string name="title_cost_log">지각비 내역</string>
+    <string name="title_character_info">캐릭터 정보</string>
+    <string name="title_alarm">알림</string>
+
+    <!--  SignUp  -->
+    <string name="hint_signup">닉네임을 입력하세요</string>
+    <string name="num_signup">%d/10</string>
+    <string name="btn_signup">저장</string>
+
+    <!--  Toolbar  -->
+    <string name="back_btn_toolbar">뒤로가기</string>
+    <string name="menu_btn_toolbar">메뉴</string>
+
+
+    <!-- home : 하단 nav바 -->
+    <string name="menu_home">홈</string>
+    <string name="menu_gallery">기록</string>
+    <string name="menu_plus">더하기</string>
+    <string name="menu_wallet">지갑</string>
+    <string name="menu_my_page">MY</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="game_view_content_description">Game view</string>
+
+
+    <string-array name="bank_names">
+        <item>농협</item>
+        <item>카카오뱅크</item>
+        <item>신한은행</item>
+    </string-array>
+
+</resources>
+

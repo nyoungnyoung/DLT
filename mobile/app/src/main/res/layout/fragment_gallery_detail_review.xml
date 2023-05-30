@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="selectedCommentId"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_review_tab"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <!--   card     -->
+                    <LinearLayout
+                        android:id="@+id/ll_detail_card"
+                        android:layout_width="0dp"
+                        android:layout_height="315dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:background="@drawable/card_rounded_detail"
+                        android:backgroundTint="@color/violet3"
+                        android:elevation="10dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <FrameLayout
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="214dp">
+
+                            <ImageView
+                                android:id="@+id/iv_gallery_detail_photo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/violet5"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/iv_overlay_camera"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_gray_camera"
+                                android:visibility="invisible" />
+
+                        </FrameLayout>
+
+
+                        <TextView
+                            android:id="@+id/tv_gallery_detail_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="47dp"
+                            android:layout_marginBottom="14dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nsr_eb"
+                            android:maxLines="1"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+
+                        <ImageView
+                            android:id="@+id/iv_decoration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="-80dp"
+                            android:src="@drawable/cha_review" />
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_review_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:gravity="center_vertical"
+                        app:layout_constraintStart_toStartOf="@id/ll_detail_card"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_detail_card">
+
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/iv_review_input_profile"-->
+<!--                            android:layout_width="30dp"-->
+<!--                            android:layout_height="30dp"-->
+<!--                            android:layout_marginEnd="7dp"-->
+<!--                            android:src="@drawable/test_image" />-->
+
+                        <EditText
+                            android:id="@+id/et_review_input_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="7dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/selector_edittext"
+                            android:fontFamily="@font/nsr_r"
+                            android:hint="댓글을 남겨주세요"
+                            android:textColorHint="@color/gray3"
+                            android:textSize="13sp" />
+
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_review_input"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/btn_review"
+
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvNoComments"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="댓글이 없습니다."
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="parent"/>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_total_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:paddingBottom="100dp"
+                        android:nestedScrollingEnabled="false"
+                        android:overScrollMode="never"
+                        android:scrollbars="none"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ll_review_input" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

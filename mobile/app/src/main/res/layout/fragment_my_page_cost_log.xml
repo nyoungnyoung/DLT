@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/violet5"
+        tools:context=".presentation.auth.MypageCostLogFragment"
+        >
+
+        <LinearLayout
+            android:id="@+id/bg_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/toolbar_under_stroke"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0" >
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/back_btn_toolbar"
+                android:padding="18dp"
+                android:src="@drawable/ic_back"/>
+
+            <TextView
+                android:id="@+id/tb_title"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/violet1"
+                android:fontFamily="@font/nsr_b"
+                android:textSize="18sp"
+                android:text="@string/title_cost_log"
+                android:maxLines="1"
+                android:paddingHorizontal="12dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_menu"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/menu_btn_toolbar"
+                android:padding="18dp"
+                android:src="@drawable/ic_menu"
+                />
+        </LinearLayout>
+
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

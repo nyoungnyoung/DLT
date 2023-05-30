@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.notification.NotificationFragment">
+
+
+        <include
+            android:id="@+id/ic_notification_toolbar"
+            layout="@layout/toolbar_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="96dp"
+            android:text="SEND"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.136"
+            app:layout_constraintStart_toStartOf="@+id/ic_notification_toolbar"
+            app:layout_constraintTop_toTopOf="@+id/ic_notification_toolbar" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_notification_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="MAKEGROUP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ic_notification_toolbar"
+            app:layout_constraintTop_toTopOf="@+id/ic_notification_toolbar" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_notification_subscribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="96dp"
+            android:text="SUBCRIBE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.848"
+            app:layout_constraintStart_toStartOf="@+id/ic_notification_toolbar"
+            app:layout_constraintTop_toTopOf="@+id/ic_notification_toolbar" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_notification_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="340dp"
+            android:text="약속임박알림"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintStart_toStartOf="@+id/ic_notification_toolbar"
+            app:layout_constraintTop_toTopOf="@+id/ic_notification_toolbar" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_notification_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="340dp"
+            android:text="게임 시작 알림"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/ic_notification_toolbar"
+            app:layout_constraintTop_toTopOf="@+id/ic_notification_toolbar" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_notification_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="340dp"
+            android:text="약속 기록알림"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.908"
+            app:layout_constraintStart_toStartOf="@+id/ic_notification_toolbar"
+            app:layout_constraintTop_toTopOf="@+id/ic_notification_toolbar" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_notification_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="484dp"
+            android:text="친구 도착 알림"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.088"
+            app:layout_constraintStart_toStartOf="@+id/ic_notification_toolbar"
+            app:layout_constraintTop_toTopOf="@+id/ic_notification_toolbar" />
+
+
+       \
+
+        <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+<!--            </ScrollView>-->
+
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

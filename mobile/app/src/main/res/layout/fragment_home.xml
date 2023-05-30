@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="top"
+        android:paddingBottom="70dp"
+        android:background="@color/violet5">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_home_selected_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2023.04"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="25sp"
+                android:fontFamily="@font/nsr_eb"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+<!--            <ImageView-->
+<!--                android:id="@+id/button_search"-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:src="@drawable/ic_search"-->
+<!--                android:layout_marginRight="20dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/button_alarm"-->
+<!--                android:layout_width="26dp"-->
+<!--                android:layout_height="26dp"-->
+<!--                android:src="@drawable/ic_alarm"-->
+<!--                android:layout_marginRight="20dp"-->
+<!--                android:layout_marginTop="20dp"/>-->
+
+        </LinearLayout>
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:background="@color/white"
+            app:mcv_calendarMode="week"
+            app:mcv_selectionColor="@color/violet2"
+            app:mcv_weekDayTextAppearance="@font/nsr_b"
+            app:mcv_tileHeight="40dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke_top_gray4"
+            android:layout_marginBottom="18dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오늘의 약속"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:fontFamily="@font/nsr_eb"
+                />
+
+            <TextView
+                android:id="@+id/tv_home_selected_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2023.04.19 (수)"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/nsr_b"
+                />
+
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/ll_promise_none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/ic_violet_cha"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="약속이 없습니다"
+                android:textSize="16sp"
+                android:fontFamily="@font/nsr_b"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_home_promise_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constrainedHeight="true"
+            />
+
+    </LinearLayout>
+</layout>

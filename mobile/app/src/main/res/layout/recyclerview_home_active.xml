@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="18dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:elevation="5dp"
+        android:background="@drawable/stroke_all_violet2"
+        >
+
+        <TextView
+            android:id="@+id/tv_active_diff_hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1시간 전"
+            android:textColor="@color/white"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="14dp"
+            android:fontFamily="@font/nsr_r"
+            android:textSize="12sp"
+            android:background="@drawable/shape_chip_violet1"/>
+
+        <TextView
+            android:id="@+id/tv_active_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="14dp"
+            android:text="SSAFY 8기 동창회"
+            android:fontFamily="@font/nsr_b"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tv_active_planTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginStart="14dp"
+            android:text="오후 6시"
+            android:fontFamily="@font/nsr_r"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="14dp"
+                android:src="@drawable/ic_map"
+                />
+
+            <TextView
+                android:id="@+id/tv_active_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:text="구미역"
+                android:fontFamily="@font/nsr_r"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="11dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_home_people_list"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                app:layout_constrainedWidth="true"/>
+
+            <TextView
+                android:id="@+id/tv_active_participantCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="5dp"
+                android:text="외 1명"
+                android:fontFamily="@font/nsr_r"
+                android:textSize="11sp"
+                />
+
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ll_promise_active_map"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="180dp"-->
+<!--            android:layout_marginStart="14dp"-->
+<!--            android:layout_marginEnd="14dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:orientation="vertical" />-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_promise_game_in"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="14dp"
+            android:text="게임 입장"
+            android:fontFamily="@font/nsr_eb"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="@drawable/button_violet"
+            />
+
+    </LinearLayout>
+</layout>

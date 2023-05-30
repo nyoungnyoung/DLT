@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_bottom_bar"
+    app:startDestination="@id/menu_home">
+
+    <fragment
+        android:id="@+id/menu_home"
+        android:name="com.dopamines.dlt.presentation.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home"/>
+    <fragment
+        android:id="@+id/menu_gallery"
+        android:name="com.dopamines.dlt.presentation.home.GalleryFragment"
+        android:label="GalleryFragment"
+        tools:layout="@layout/fragment_gallery"/>
+    <fragment
+        android:id="@+id/main_fab"
+        android:name="com.dopamines.dlt.presentation.home.PlusFragment"
+        android:label="PlusFragment"
+        tools:layout="@layout/fragment_plus"/>
+    <fragment
+        android:id="@+id/menu_store"
+        android:name="com.dopamines.dlt.presentation.wallet.WalletFragment"
+        android:label="WalletFragment"
+        tools:layout="@layout/fragment_wallet"/>
+    <fragment
+        android:id="@+id/menu_my_page"
+        android:name="com.dopamines.dlt.presentation.home.MyPageFragment"
+        android:label="MyPageFragment"
+        tools:layout="@layout/fragment_my_page"/>
+
+    <fragment
+        android:id="@+id/detailPlanFragment"
+        android:name="com.dopamines.dlt.presentation.detail.DetailPlanFragment"
+        android:label="DetailPlanFragment" />
+
+    <fragment
+        android:id="@+id/createDateFragment"
+        android:name="com.dopamines.dlt.presentation.create.CreateDateFragment"
+        android:label="CreateDateFragment" />
+    <fragment
+        android:id="@+id/galleryDetailFragment"
+        android:name="com.dopamines.dlt.presentation.gallery.GalleryDetailFragment"
+        android:label="GalleryDetailFragment" />
+    <fragment
+        android:id="@+id/myPageUserInfoFragment"
+        android:name="com.dopamines.dlt.presentation.home.MyPageUserInfoFragment"
+        android:label="MyPageUserInfoFragment" />
+    <fragment
+        android:id="@+id/myPageCostLogFragment"
+        android:name="com.dopamines.dlt.presentation.home.MyPageCostLogFragment"
+        android:label="MyPageCostLogFragment" />
+    <fragment
+        android:id="@+id/myPagePlanLogFragment"
+        android:name="com.dopamines.dlt.presentation.home.MyPagePlanLogFragment"
+        android:label="MyPagePlanLogFragment" />
+    <fragment
+        android:id="@+id/galleryDetailCompleteFragment"
+        android:name="com.dopamines.dlt.presentation.gallery.GalleryDetailCompleteFragment"
+        android:label="GalleryDetailCompleteFragment" />
+    <fragment
+        android:id="@+id/galleryDetailReviewFragment"
+        android:name="com.dopamines.dlt.presentation.gallery.GalleryDetailReviewFragment"
+        android:label="GalleryDetailReviewFragment" />
+
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.dopamines.dlt.presentation.notification.NotificationFragment"
+        android:label="NotificationFragment" />
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.dopamines.dlt.presentation.wallet.WalletFragment"
+        android:label="WalletFragment" />
+    <fragment
+        android:id="@+id/friendFragment"
+        android:name="com.dopamines.dlt.presentation.home.FriendFragment"
+        android:label="FriendFragment" />
+</navigation>

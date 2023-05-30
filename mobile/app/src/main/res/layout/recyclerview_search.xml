@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/gray4">
+        <TextView
+            android:id="@+id/tv_promise_place_list_item"
+            android:paddingTop="11dp"
+            android:paddingStart="11dp"
+            android:paddingEnd="11dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="장소 이름"
+            android:textColor="@color/gray2"
+            android:fontFamily="@font/nsr_r"
+            android:textSize="14sp"
+            />
+    </LinearLayout>
+
+</layout>

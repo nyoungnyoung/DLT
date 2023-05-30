@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/violet5"
+        tools:context=".presentation.auth.PermissionFragment">
+
+        <TextView
+            android:id="@+id/tv_title_permission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="60dp"
+            android:text="@string/title_permission"
+            android:fontFamily="@font/nsr_eb"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_content_permission_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/content_permission_main"
+            android:fontFamily="@font/nsr_r"
+            android:textColor="@color/gray2"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@id/tv_title_permission"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_permission" />
+
+        <TextView
+            android:id="@+id/tv_content_permission_sub"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/content_permission_sub"
+            android:fontFamily="@font/nsr_r"
+            android:textColor="@color/gray2"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_title_permission"
+            app:layout_constraintTop_toBottomOf="@id/tv_content_permission_main" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_permission_gps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="@id/tv_content_permission_sub"
+            app:layout_constraintStart_toStartOf="@id/tv_content_permission_sub"
+            app:layout_constraintTop_toBottomOf="@id/tv_content_permission_sub">
+
+            <ImageView
+                android:id="@+id/iv_gps"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/image_black_camera"
+                android:src="@drawable/ic_black_camera"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_permission_gps_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_gps"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_title_permission_gps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_permission_camera"
+                    android:fontFamily="@font/nsr_eb"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_content_permission_gps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/content_permission_camera"
+                    android:fontFamily="@font/nsr_r"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_permission_gallery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            app:layout_constraintEnd_toEndOf="@id/tv_content_permission_sub"
+            app:layout_constraintStart_toStartOf="@id/tv_content_permission_sub"
+            app:layout_constraintTop_toBottomOf="@id/cl_permission_gps">
+
+            <ImageView
+                android:id="@+id/iv_gallery"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/image_black_gallery"
+                android:src="@drawable/ic_black_gallery"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_permission_gallery_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_gallery"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_title_permission_gallery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_permission_gallery"
+                    android:fontFamily="@font/nsr_eb"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_content_permission_gallery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/content_permission_gallery"
+                    android:fontFamily="@font/nsr_r"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_permission_camera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            app:layout_constraintEnd_toEndOf="@id/tv_content_permission_sub"
+            app:layout_constraintStart_toStartOf="@id/tv_content_permission_sub"
+            app:layout_constraintTop_toBottomOf="@id/cl_permission_gallery">
+
+            <ImageView
+                android:id="@+id/iv_camera"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/image_black_gallery"
+                android:src="@drawable/ic_black_location"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_permission_camera_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_camera"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_title_permission_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_permission_location"
+                    android:fontFamily="@font/nsr_eb"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_content_permission_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/content_permission_location"
+                    android:fontFamily="@font/nsr_r"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_permission_check"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginHorizontal="42dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/button_violet"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:text="@string/content_check"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:fontFamily="@font/nsr_eb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
