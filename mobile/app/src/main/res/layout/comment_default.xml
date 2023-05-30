@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+      >
+
+
+        <LinearLayout
+            android:id="@+id/ll_review_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            >
+
+
+            <ImageView
+                android:id="@+id/iv_comment_profile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="top"
+                android:src="@drawable/test_image" />
+
+            <LinearLayout
+                android:id="@+id/ll_test"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp">
+
+                    <TextView
+                        android:id="@+id/tv_comment_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:fontFamily="@font/nsr_b"
+                        android:text="김차돌돌로"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_comment_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nsr_b"
+                        android:text="10:30"
+                        android:textColor="@color/gray2"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_comment_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nsr_r"
+                    android:text="해장하실분"
+                    android:textSize="14dp"
+                    android:ellipsize="end"
+                    android:maxLines="10"/>
+
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_review_delete"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_trash"
+                android:visibility="invisible"
+
+                />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

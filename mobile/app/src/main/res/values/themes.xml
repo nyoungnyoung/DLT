@@ -1,0 +1,44 @@
+<resources
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DLT" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+    </style>
+    
+    <style name="Theme.DLT" parent="Base.Theme.DLT" />
+
+    <!-- calendar 폰트 -->
+    <style name="CustomDateTextAppearance" parent="TextAppearance.MaterialCalendarWidget.Date">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/nsr_b</item>
+    </style>
+
+    <style name="CustomWeekDayAppearance" parent="TextAppearance.MaterialCalendarWidget.WeekDay">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/nsr_b</item>
+    </style>
+
+    <style name="CustomHeaderTextAppearance" parent="TextAppearance.MaterialCalendarWidget.Header">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/nsr_b</item>
+    </style>
+
+    <!-- TimePicker -->
+    <style name="CustomTimePicker">
+        <item name="android:textColorPrimary">@color/black</item><!-- text color -->
+        <item name="colorControlNormal">@color/violet2</item><!-- divider color -->
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/nsr_b</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,78 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.11'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.dopamines'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+	maven { url 'https://devrepo.kakao.com/nexus/content/groupts/public'}
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.15.0'
+
+	//querydsl 추가
+	implementation "com.querydsl:querydsl-jpa:5.0.0"
+	implementation "com.querydsl:querydsl-apt:5.0.0"
+
+	// swagger
+	implementation 'io.springfox:springfox-boot-starter:3.0.0'
+
+ 	// Websocket
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+
+	// GSON
+	implementation 'com.google.code.gson:gson:2.9.0'
+
+	// json 파싱관련
+	implementation 'org.json:json:20201115'
+
+	// Firebase
+	implementation 'com.google.firebase:firebase-admin:9.1.1'
+
+	// Okhttp3
+	implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+
+	// 네이버 클라우드
+	implementation platform('com.amazonaws:aws-java-sdk-bom:1.11.1000')
+	implementation 'com.amazonaws:aws-java-sdk-s3'
+
+	// JWT
+	implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-impl:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+
+	// Mac M1 관련 오류(Unable to load io.netty.resolver.dns.macos)
+	implementation 'io.netty:netty-resolver-dns-native-macos:4.1.68.Final:osx-aarch_64'
+
+	// security OAuth
+//	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

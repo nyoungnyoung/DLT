@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+  >
+
+    <data>
+
+        <variable
+            name="planDetail"
+            type="com.dopamines.dlt.presentation.detail.PlanDetail" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:id="@+id/sv_detail_promise"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--   card     -->
+                <LinearLayout
+                    android:id="@+id/ll_detail_card"
+                    android:layout_width="0dp"
+                    android:layout_height="166dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/card_rounded_detail"
+                    android:elevation="10dp"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_title_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="14dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/nsr_eb"
+                        android:maxLines="1"
+                        android:text="@{planDetail.title}"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_datetime_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="40dp"
+                        android:fontFamily="@font/nsr_b"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_late_cost_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/nsr_eb"
+                            android:text="지각비"
+                            android:textColor="@color/violet3"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tv_late_cost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nsr_eb"
+                            android:maxLength="7"
+
+                            android:textColor="@color/violet1"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tv_last_day"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nsr_eb"
+                            android:gravity="end"
+
+                            android:textColor="@color/red1"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--   Button   -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/button_violet"
+                    android:fontFamily="@font/nsr_eb"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_location_session"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_detail_card" />
+
+                <!--  location     -->
+                <LinearLayout
+                    android:id="@+id/ll_location_session"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/ll_detail_card"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_detail"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_title_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="11dp"
+                        android:fontFamily="@font/nsr_eb"
+                        android:text="위치"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="13dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="11dp"
+                            android:contentDescription=""
+                            android:src="@drawable/ic_violet_location"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:focusable="true"
+
+                            android:focusableInTouchMode="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_title_plan_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/nsr_b"
+                                android:maxLines="1"
+
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_content_plan_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/nsr_r"
+                                android:maxLines="1"
+
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/iv_copy"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="11dp"
+                            android:contentDescription=""
+                            android:src="@drawable/ic_violet_copy"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_promise_map"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+
+                <!--   FriendList     -->
+                <LinearLayout
+                    android:id="@+id/ll_participate_friend_list"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="33dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_location_session">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="11dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_title_participate_friend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nsr_eb"
+                            android:gravity="start"
+                            android:text="참여자"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <include
+                            android:id="@+id/detail_count_friend"
+                            layout="@layout/pill_count_friend" />
+
+                    </LinearLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_participate_friend_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:overScrollMode="never"
+                        android:scrollbars="none"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="3" />
+
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <include
+            android:id="@+id/sign_up_toolbar"
+            layout="@layout/toolbar_default" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

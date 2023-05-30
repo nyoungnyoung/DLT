@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_home"
+        android:title="@string/menu_home"
+        android:icon="@drawable/ic_home"
+        />
+    <item
+        android:id="@+id/menu_gallery"
+        android:title="@string/menu_gallery"
+        android:icon="@drawable/ic_gallery"
+        android:menuCategory="secondary"
+        />
+    <item
+        android:title=""
+        android:enabled="false"
+        android:menuCategory="secondary"
+        />
+    <item
+        android:id="@+id/menu_store"
+        android:title="@string/menu_wallet"
+        android:icon="@drawable/ic_wallet"
+        android:menuCategory="secondary"
+        />
+    <item
+        android:id="@+id/menu_my_page"
+        android:title="@string/menu_my_page"
+        android:icon="@drawable/ic_my_page"
+        android:menuCategory="secondary"
+        />
+</menu>

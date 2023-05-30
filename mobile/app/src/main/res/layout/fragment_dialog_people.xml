@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="288dp"
+            android:layout_height="424dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/shape_dialog_white">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="참여자 추가"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/nsr_eb" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:id="@+id/iv_dialog_close"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_delete"/>
+            </LinearLayout>
+            <EditText
+                android:id="@+id/et_dialog_people"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="12dp"
+                android:paddingEnd="10dp"
+                android:background="@drawable/selector_edittext"
+                android:hint="참여자를 검색해 주세요."
+                android:drawableEnd="@drawable/drawable_ic_search"
+                android:drawablePadding="10dp"
+                android:textColorHint="@color/gray2"
+                android:fontFamily="@font/nsr_r"
+                android:textSize="14sp"
+                android:singleLine="true"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="참여하는 친구"
+                    android:fontFamily="@font/nsr_eb"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:id="@+id/tv_dialog_people_cnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0명"
+                    android:fontFamily="@font/nsr_r"
+                    android:textSize="11sp"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_promise_dialog_people_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingStart="-6dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:scrollbars="horizontal"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_promise_dialog_search_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:scrollbars="horizontal"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_promise_people"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="7dp"
+                android:layout_gravity="bottom"
+                android:text="확인"
+                android:textColor="@color/white"
+                android:fontFamily="@font/nsr_eb"
+                android:textSize="16sp"
+                android:background="@drawable/button_violet"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

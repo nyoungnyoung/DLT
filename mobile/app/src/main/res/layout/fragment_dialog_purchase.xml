@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_rounded_detail">
+
+        <LinearLayout
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.3"/>
+                <TextView
+                    android:id="@+id/tv_title_set_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/nsr_eb" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:id="@+id/btn_close_purchase"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_delete"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <EditText
+                    android:id="@+id/et_input_cost"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="금액을 입력해주세요."
+                    android:paddingEnd="10dp"
+                    android:background="@drawable/selector_edittext"
+                    android:textColorHint="@color/gray2"
+                    android:fontFamily="@font/nsr_r"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                    android:inputType="number"/>
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_temp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp">
+
+
+                <Spinner
+                    android:id="@+id/bank_spinner"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:entries="@array/bank_names" />
+
+                <EditText
+                    android:id="@+id/et_back_account"
+                    android:layout_width="match_parent"
+                    android:textSize="14sp"
+
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_edittext"
+                    android:textColorHint="@color/gray2"
+                    android:fontFamily="@font/nsr_r"
+                    android:singleLine="true"
+                    android:paddingEnd="10dp"
+                    android:inputType="number"
+                    />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_purchase"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+
+                android:background="@drawable/button_violet"
+                android:fontFamily="@font/nsr_eb"
+                android:text="충전"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

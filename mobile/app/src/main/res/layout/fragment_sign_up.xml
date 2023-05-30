@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/sign_up_toolbar"
+            layout="@layout/toolbar_default"/>
+
+        <EditText
+
+            android:id="@+id/et_sign_up_input"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="159dp"
+            android:background="@drawable/selector_edittext"
+            android:fontFamily="@font/nsr_r"
+            android:hint="@string/hint_signup"
+            android:textColorHint="@color/gray3"
+            android:textSize="16sp"
+            android:maxLength="10"
+            android:autofillHints=""
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0" />
+
+        <TextView
+            android:id="@+id/tv_name_cnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/nsr_r"
+            android:text="@string/num_signup"
+            android:textColor="@color/gray2"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/et_sign_up_input"
+            app:layout_constraintTop_toBottomOf="@+id/et_sign_up_input" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_sign_up"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/button_violet"
+            android:text="@string/btn_signup"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:fontFamily="@font/nsr_eb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_sign_up_input"
+            app:layout_constraintVertical_bias="0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

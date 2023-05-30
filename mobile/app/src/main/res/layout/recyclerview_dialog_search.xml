@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+        <ImageView
+            android:id="@+id/iv_dialog_search_people"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_search"/>
+        <TextView
+            android:id="@+id/tv_dialog_search_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text=""
+            android:fontFamily="@font/nsr_r"
+            android:textSize="11sp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <ToggleButton
+            android:id="@+id/tb_dialog_search_people"
+            android:layout_width="45dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="1dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/selector_tb_dialog_search_people"
+            android:textOn="해제"
+            android:textOff="추가"
+            android:fontFamily="@font/nsr_b"
+            android:textSize="12sp"
+            android:textColor="@drawable/selector_tb_dialog_search_people_textcolor"/>
+    </LinearLayout>
+</layout>
